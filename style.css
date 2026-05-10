@@ -699,3 +699,170 @@ section{
 
 }
 
+@media(max-width:768px){
+
+  section{
+    padding:60px 22px;
+  }
+
+  .logo img{
+    width:110px;
+  }
+
+  .hero{
+    height:auto;
+    min-height:100vh;
+    padding-top:110px;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+  }
+
+  .hero-content{
+    flex-direction:column;
+    text-align:center;
+    gap:35px;
+  }
+
+  .left h1{
+    font-size:48px;
+    line-height:1.05;
+  }
+
+  .left p{
+    font-size:18px;
+    line-height:1.6;
+    margin-top:25px;
+  }
+
+  .socials{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+  .socials a{
+    width:52px;
+    height:52px;
+    font-size:22px;
+  }
+
+  .right img{
+    width:100%;
+    max-width:330px;
+  }
+
+  .author h3{
+    font-size:58px;
+  }
+
+  .author p{
+    font-size:11px;
+    letter-spacing:3px;
+  }
+
+  .about{
+    flex-direction:column;
+    padding:70px 22px;
+    gap:35px;
+    text-align:left;
+  }
+
+  .about-image img{
+    max-width:100%;
+  }
+
+  .about-content h2{
+    font-size:28px;
+  }
+
+  .about-content p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .works{
+    padding:70px 22px;
+  }
+
+  .works h2,
+  .video-section h2,
+  .price h2{
+    font-size:36px;
+  }
+
+  .slider{
+    margin-top:35px;
+    border-radius:22px;
+  }
+
+  .slides{
+    height:auto;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .slide{
+    width:100%;
+    height:auto;
+    max-height:520px;
+    object-fit:contain;
+  }
+
+  .prev,
+  .next{
+    width:48px;
+    height:48px;
+    font-size:22px;
+  }
+
+  .prev{
+    left:10px;
+  }
+
+  .next{
+    right:10px;
+  }
+
+  .thumbnails{
+    gap:10px;
+    margin-top:20px;
+  }
+
+  .thumb{
+    width:58px;
+    height:58px;
+    min-width:58px;
+    border-radius:10px;
+  }
+
+  .video-section{
+    padding:70px 22px;
+  }
+
+  .video-gallery{
+    flex-direction:column;
+  }
+
+  .video-card{
+    width:100%;
+  }
+
+  .video-card video{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .cards{
+    flex-direction:column;
+  }
+
+  .card{
+    padding:28px;
+  }
+
+  .card p{
+    font-size:30px;
+  }
+
+}

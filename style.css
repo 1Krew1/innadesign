@@ -42,6 +42,8 @@ section{
 
   overflow:visible;
 
+  padding-bottom:80px;
+
   border-bottom-left-radius:40px;
 
   border-bottom-right-radius:40px;
@@ -698,7 +700,8 @@ section{
 
 }
 
-@media(max-width:768px){/* =====================
+@media(max-width:768px){
+  /* =====================
    ОБЩИЕ ОГРАНИЧЕНИЯ
    ===================== */
 
@@ -954,6 +957,30 @@ section{
   .card{
     width:100%;
     max-width:340px;
+  }
+
+}
+/* =====================
+   НОУТБУКИ
+   ===================== */
+
+@media(min-width:1025px) and (max-width:1439px){
+
+  .hero{
+    padding-top:80px;
+    padding-bottom:120px;
+  }
+
+  .right img{
+    width:380px;
+  }
+
+  .author h3{
+    font-size:64px;
+  }
+
+  .author p{
+    font-size:12px;
   }
 
 }

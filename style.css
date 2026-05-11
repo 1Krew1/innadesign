@@ -585,7 +585,7 @@ section{
 }
 
 .logo img{
-  width:70px;
+  width:180px;
   height:auto;
 }
 
@@ -795,21 +795,23 @@ section{
 
   .author{
 
-    margin-top:20px;
+    margin-top:18px;
 
     text-align:center;
+
+    display:block;
 
   }
 
   .author h3{
 
-    font-size:52px;
+    font-size:46px;
 
   }
 
   .author p{
 
-    font-size:11px;
+    font-size:10px;
 
     letter-spacing:3px;
 

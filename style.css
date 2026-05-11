@@ -40,7 +40,7 @@ section{
 
   position:relative;
 
-  overflow:hidden;
+  overflow:visible;
 
   border-bottom-left-radius:40px;
 
@@ -633,17 +633,15 @@ section{
 }
 
 .author p{
-
-  margin-top:8px;
-
-  font-size:13px;
-
+  margin-top:14px;
+  font-size:15px;
   letter-spacing:4px;
-
   text-transform:uppercase;
-
-  color:rgba(255,255,255,0.65);
-
+  color:rgba(255,255,255,0.9);
+  line-height:1.4;
+  display:block;
+  position:relative;
+  z-index:20;
 }
 
 .author{

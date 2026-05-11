@@ -1,81 +1,83 @@
 const slides = document.querySelectorAll(".slide");
-
 const thumbs = document.querySelectorAll(".thumb");
-
 const nextBtn = document.querySelector(".next");
-
 const prevBtn = document.querySelector(".prev");
 
 let current = 0;
+const visibleSlides = 2;
+const visibleThumbs = 5;
 
-function updateGallery(){
+function normalizeIndex(index){
+  if(index < 0){
+    return Math.max(slides.length - visibleSlides, 0);
+  }
 
-  slides.forEach((slide, index) => {
+  if(index >= slides.length){
+    return 0;
+  }
 
-    slide.style.display = "none";
+  if(index > slides.length - visibleSlides){
+    return Math.max(slides.length - visibleSlides, 0);
+  }
 
-    if(index === current || index === current + 1){
-
-      slide.style.display = "block";
-
-    }
-
-  });
-
- thumbs.forEach(thumb => {
-
-  thumb.classList.remove("active-thumb");
-
-});
-
-thumbs[current].classList.add("active-thumb");
-
-if(current + 1 < thumbs.length){
-
-  thumbs[current + 1].classList.add("active-thumb");
-
+  return index;
 }
 
+function updateGallery(){
+  current = normalizeIndex(current);
+
+  slides.forEach((slide, index) => {
+    slide.style.display = "none";
+
+    if(index >= current && index < current + visibleSlides){
+      slide.style.display = "block";
+    }
+  });
+
+  thumbs.forEach((thumb) => {
+    thumb.classList.remove("active-thumb");
+    thumb.style.display = "none";
+  });
+
+  thumbs[current].classList.add("active-thumb");
+
+  if(thumbs[current + 1]){
+    thumbs[current + 1].classList.add("active-thumb");
+  }
+
+  let thumbStart = current - 2;
+  let thumbEnd = current + 2;
+
+  if(thumbStart < 0){
+    thumbStart = 0;
+    thumbEnd = visibleThumbs - 1;
+  }
+
+  if(thumbEnd >= thumbs.length){
+    thumbEnd = thumbs.length - 1;
+    thumbStart = Math.max(thumbs.length - visibleThumbs, 0);
+  }
+
+  for(let i = thumbStart; i <= thumbEnd; i++){
+    thumbs[i].style.display = "block";
+  }
 }
 
 nextBtn.addEventListener("click", () => {
-
-  current += 2;
-
-  if(current >= slides.length){
-
-    current = 0;
-
-  }
-
+  current += visibleSlides;
   updateGallery();
-
 });
 
 prevBtn.addEventListener("click", () => {
-
-  current -= 2;
-
-  if(current < 0){
-
-    current = slides.length - 2;
-
-  }
-
+  current -= visibleSlides;
   updateGallery();
-
 });
 
 thumbs.forEach((thumb, index) => {
-
   thumb.addEventListener("click", () => {
-
     current = index;
-
     updateGallery();
-
   });
-
 });
 
 updateGallery();

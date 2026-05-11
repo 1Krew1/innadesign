@@ -1307,3 +1307,65 @@ section{
 
 }
 }
+
+.hero-content,
+.about,
+.slides,
+.thumbnails,
+.video-gallery,
+.cards{
+  max-width:1400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media(min-width:1440px){
+
+  .left h1{
+    font-size:96px;
+  }
+
+  .left p{
+    font-size:28px;
+  }
+
+  .right img{
+    width:520px;
+  }
+
+  .about-content h2,
+  .works h2,
+  .video-section h2,
+  .price h2{
+    font-size:60px;
+  }
+
+}
+
+@media(min-width:1025px) and (max-width:1439px){
+
+  .left h1{
+    font-size:72px;
+  }
+
+  .left p{
+    font-size:22px;
+  }
+
+  .right img{
+    width:420px;
+  }
+
+  .about{
+    gap:50px;
+  }
+
+}
+
+.video-gallery{
+  justify-content:center;
+}
+
+.cards{
+  justify-content:center;
+}

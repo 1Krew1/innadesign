@@ -1,4 +1,24 @@
-const slides = document.querySelectorAll(".slide");
+const slidesContainer = document.querySelector(".slides");
+const thumbsContainer = document.querySelector(".thumbnails");
+
+const totalImages = 587;
+
+for(let i = 1; i <= totalImages; i++){
+
+  slidesContainer.innerHTML += `
+    <div class="slide-box">
+      <img src="images/projects/work${i}.jpg" class="slide" loading="lazy">
+    </div>
+  `;
+
+  thumbsContainer.innerHTML += `
+    <img src="images/projects/work${i}.jpg" class="thumb" loading="lazy">
+  `;
+
+}
+
+
+const slides = document.querySelectorAll(".slide-box");
 const thumbs = document.querySelectorAll(".thumb");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");

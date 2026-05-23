@@ -1288,3 +1288,12 @@ h2{
   }
 
 }
+
+@media(max-width:768px){
+
+  .prev,
+  .next{
+    display:none;
+  }
+
+}

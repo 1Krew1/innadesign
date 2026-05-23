@@ -136,3 +136,48 @@ cards.forEach((card) => {
 });
 
 window.addEventListener("resize", updateGallery);
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("touchstart", (e) => {
+
+  touchStartX = e.changedTouches[0].screenX;
+
+});
+
+slider.addEventListener("touchend", (e) => {
+
+  touchEndX = e.changedTouches[0].screenX;
+
+  handleSwipe();
+
+});
+
+function handleSwipe(){
+
+  const swipeDistance = touchStartX - touchEndX;
+
+  /* свайп влево */
+
+  if(swipeDistance > 50){
+
+    current += getVisibleSlides();
+
+    updateGallery();
+
+  }
+
+  /* свайп вправо */
+
+  if(swipeDistance < -50){
+
+    current -= getVisibleSlides();
+
+    updateGallery();
+
+  }
+
+}

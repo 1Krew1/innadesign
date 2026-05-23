@@ -1046,18 +1046,175 @@ section{
 
 @media(max-width:768px){
 
-  .footer{
+body{
+  overflow-x:hidden;
+}
 
-    padding:70px 20px 40px;
+/* ОБЩИЕ */
 
-  }
+section{
+  padding:60px 20px;
+}
 
-  .footer-content{
+h2{
+  font-size:42px !important;
+  line-height:1.2;
+}
 
-    flex-direction:column;
+/* HERO */
 
-    gap:50px;
+.hero{
+  height:auto;
+  padding-top:120px;
+  padding-bottom:60px;
+}
 
-  }
+.hero-content{
+  flex-direction:column;
+  text-align:center;
+  gap:40px;
+}
+
+.left h1{
+  font-size:42px;
+}
+
+.left p{
+  font-size:15px;
+  line-height:1.7;
+}
+
+.socials{
+  justify-content:center;
+}
+
+.socials a{
+  width:48px;
+  height:48px;
+  font-size:18px;
+}
+
+/* ФОТО ДЕВУШКИ */
+
+.right{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.right img{
+  width:100%;
+  max-width:280px;
+  height:auto;
+
+  transform:none;
+}
+
+/* ПОДПИСЬ */
+
+.author h3{
+  font-size:42px;
+}
+
+.author p{
+  font-size:10px;
+  letter-spacing:3px;
+}
+
+/* ОБО МНЕ */
+
+.about{
+  flex-direction:column;
+  padding:60px 20px;
+  gap:30px;
+}
+
+.about-image img{
+  width:100%;
+}
+
+.about-content{
+  max-width:100%;
+}
+
+.about-content h2{
+  font-size:34px;
+}
+
+.about-content p{
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* ГАЛЕРЕЯ */
+
+.slides{
+  grid-template-columns:1fr;
+}
+
+.slide-box .slide{
+  height:420px;
+}
+
+.thumb{
+  min-width:70px;
+  height:70px;
+}
+
+/* ВИДЕО */
+
+.video-gallery{
+  flex-direction:column;
+  align-items:center;
+}
+
+.video-card{
+  width:100%;
+  max-width:320px;
+  flex:none;
+}
+
+.video-card video{
+  height:500px;
+}
+
+/* ЦЕНЫ */
+
+.cards{
+  flex-direction:column;
+  align-items:center;
+}
+
+.card{
+  width:100%;
+  max-width:320px;
+  padding:30px 24px;
+}
+
+.card p{
+  font-size:28px;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:70px 20px 40px;
+}
+
+.footer-content{
+  flex-direction:column;
+  gap:50px;
+}
+
+.footer-left h2{
+  font-size:34px;
+}
+
+/* ЛОГО */
+
+.logo img{
+  width:70px;
+}
 
 }

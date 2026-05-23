@@ -816,9 +816,26 @@ section{
    padding:60px 20px;
 }
 
-.slides{
-  display:flex;
-  gap:14px;
+  .slides{
+    grid-template-columns:1fr;
+  }
+
+  .slide-box .slide{
+    width:100%;
+    height:auto;
+    max-height:620px;
+    object-fit:contain;
+  }
+
+.thumbnails{
+  gap:10px;
+  overflow:hidden;
+}
+
+.thumb{
+  min-width:62px;
+  width:62px;
+  height:62px;
 }
 
 .video-gallery{
@@ -1159,7 +1176,10 @@ h2{
 }
 
 .slide-box .slide{
-  height:420px;
+  width:100%;
+  height:auto;
+  max-height:620px;
+  object-fit:contain;
 }
 
 .thumb{

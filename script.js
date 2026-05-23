@@ -24,10 +24,15 @@ const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
 let current = 0;
-const visibleSlides = 2;
+
+function getVisibleSlides(){
+  return window.innerWidth <= 768 ? 1 : 2;
+}
+
 const visibleThumbs = 5;
 
 function normalizeIndex(index){
+  const visibleSlides = getVisibleSlides();
   if(index < 0){
     return Math.max(slides.length - visibleSlides, 0);
   }
@@ -44,6 +49,8 @@ function normalizeIndex(index){
 }
 
 function updateGallery(){
+
+  const visibleSlides = getVisibleSlides();
   current = normalizeIndex(current);
 
   slides.forEach((slide, index) => {
@@ -61,9 +68,9 @@ function updateGallery(){
 
   thumbs[current].classList.add("active-thumb");
 
-  if(thumbs[current + 1]){
-    thumbs[current + 1].classList.add("active-thumb");
-  }
+if(getVisibleSlides() === 2 && thumbs[current + 1]){
+  thumbs[current + 1].classList.add("active-thumb");
+}
 
   let thumbStart = current - 2;
   let thumbEnd = current + 2;
@@ -84,12 +91,12 @@ function updateGallery(){
 }
 
 nextBtn.addEventListener("click", () => {
-  current += visibleSlides;
+  current += getVisibleSlides();
   updateGallery();
 });
 
 prevBtn.addEventListener("click", () => {
-  current -= visibleSlides;
+  current -= getVisibleSlides();
   updateGallery();
 });
 
@@ -110,3 +117,5 @@ cards.forEach((card) => {
     card.classList.toggle("active");
   });
 });
+
+window.addEventListener("resize", updateGallery);

@@ -817,7 +817,8 @@ section{
 }
 
 .slides{
-   grid-template-columns:1fr;
+  display:flex;
+  gap:14px;
 }
 
 .video-gallery{
@@ -1153,13 +1154,18 @@ h2{
   grid-template-columns:1fr;
 }
 
+.slide-box{
+  flex:1;
+}
+
 .slide-box .slide{
   height:420px;
 }
 
 .thumb{
-  min-width:70px;
-  height:70px;
+  min-width:62px;
+  width:62px;
+  height:62px;
 }
 
 /* ВИДЕО */

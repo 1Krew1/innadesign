@@ -1245,28 +1245,3 @@ h2{
 
 }
 
-@media(max-width:768px){
-
-  .slide-box{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#050505;
-  }
-
-  .slide-box .slide{
-
-    width:100% !important;
-
-    height:auto !important;
-
-    max-height:78vh !important;
-
-    object-fit:contain !important;
-
-    border-radius:30px;
-
-  }
-
-}

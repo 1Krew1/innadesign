@@ -3,19 +3,36 @@ const thumbsContainer = document.querySelector(".thumbnails");
 
 const totalImages = 30;
 
-for(let i = 1; i <= totalImages; i++){
+let slidesHTML = "";
+let thumbsHTML = "";
 
-  slidesContainer.innerHTML += `
+for (let i = 1; i <= totalImages; i++) {
+
+  const src = `images/projects/work${i}.jpg`;
+
+  slidesHTML += `
     <div class="slide-box">
-      <img src="images/projects/work${i}.jpg" class="slide" loading="lazy">
+      <img 
+        src="${src}" 
+        class="slide" 
+        loading="lazy"
+        alt="Проект ${i}"
+      >
     </div>
   `;
 
-  thumbsContainer.innerHTML += `
-    <img src="images/projects/work${i}.jpg" class="thumb" loading="lazy">
+  thumbsHTML += `
+    <img 
+      src="${src}" 
+      class="thumb" 
+      loading="lazy"
+      alt="Миниатюра ${i}"
+    >
   `;
-
 }
+
+slidesContainer.innerHTML = slidesHTML;
+thumbsContainer.innerHTML = thumbsHTML;
 
 
 const slides = document.querySelectorAll(".slide-box");

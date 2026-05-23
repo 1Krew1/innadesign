@@ -181,3 +181,82 @@ function handleSwipe(){
   }
 
 }
+
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const closeLightbox = document.querySelector(".close-lightbox");
+
+let lightboxIndex = 0;
+
+slides.forEach((slide, index) => {
+
+  slide.addEventListener("click", () => {
+
+    const image = slide.querySelector("img");
+
+    lightboxIndex = index;
+
+    lightboxImage.src = image.src;
+
+    lightbox.classList.add("active");
+
+  });
+
+});
+
+function showLightboxImage(index){
+
+  if(index < 0){
+    lightboxIndex = slides.length - 1;
+  } else if(index >= slides.length){
+    lightboxIndex = 0;
+  } else {
+    lightboxIndex = index;
+  }
+
+  const image = slides[lightboxIndex].querySelector("img");
+
+  lightboxImage.src = image.src;
+
+}
+
+closeLightbox.addEventListener("click", () => {
+
+  lightbox.classList.remove("active");
+
+});
+
+lightbox.addEventListener("click", (e) => {
+
+  if(e.target === lightbox){
+
+    lightbox.classList.remove("active");
+
+  }
+
+});
+
+let lightboxStartX = 0;
+let lightboxEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+
+  lightboxStartX = e.changedTouches[0].screenX;
+
+});
+
+lightbox.addEventListener("touchend", (e) => {
+
+  lightboxEndX = e.changedTouches[0].screenX;
+
+  const swipeDistance = lightboxStartX - lightboxEndX;
+
+  if(swipeDistance > 50){
+    showLightboxImage(lightboxIndex + 1);
+  }
+
+  if(swipeDistance < -50){
+    showLightboxImage(lightboxIndex - 1);
+  }
+
+});

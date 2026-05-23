@@ -1176,10 +1176,15 @@ h2{
 }
 
 .slide-box .slide{
+
   width:100%;
-  height:auto;
-  max-height:620px;
-  object-fit:contain;
+
+  height:78vh;
+
+  object-fit:cover;
+
+  border-radius:30px;
+
 }
 
 .thumb{
@@ -1208,8 +1213,19 @@ h2{
 /* ЦЕНЫ */
 
 .cards{
-  flex-direction:column;
-  align-items:center;
+
+  display:flex;
+
+  gap:20px;
+
+  margin-top:40px;
+
+  justify-content:center;
+
+  align-items:stretch;
+
+  flex-wrap:wrap;
+
 }
 
 .card{
@@ -1245,3 +1261,30 @@ h2{
 
 }
 
+@media(max-width:768px){
+
+  .price{
+    text-align:center;
+  }
+
+  .cards{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .card{
+    width:100%;
+    max-width:320px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+
+  .card-header{
+    text-align:center;
+  }
+
+}

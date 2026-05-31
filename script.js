@@ -8,7 +8,7 @@ let thumbsHTML = "";
 
 for (let i = 1; i <= totalImages; i++) {
 
-  const src = `images/projects/work${i}.jpg`;
+  const src = `images/projects/work${i}.JPG`;
 
   slidesHTML += `
     <div class="slide-box">

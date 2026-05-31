@@ -1,7 +1,7 @@
 const slidesContainer = document.querySelector(".slides");
 const thumbsContainer = document.querySelector(".thumbnails");
 
-const totalImages = 30;
+const totalImages = 96;
 
 let slidesHTML = "";
 let thumbsHTML = "";

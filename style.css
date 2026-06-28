@@ -1262,3 +1262,43 @@ section{
   background:#d9a441;
   color:black;
 }
+
+.max-icon{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  display:block;
+}
+
+
+.max-icon{
+  filter:brightness(0) invert(1);
+}
+
+.footer-max-link{
+    display:flex;
+    align-items:center;
+}
+
+.footer-max-icon{
+    width:16px;
+    height:16px;
+
+    margin-right:6px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+filter:
+        brightness(0)
+        saturate(100%)
+        invert(70%)
+        sepia(58%)
+        saturate(760%)
+        hue-rotate(356deg)
+        brightness(95%)
+        contrast(90%);
+
+}
+

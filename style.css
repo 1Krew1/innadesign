@@ -311,11 +311,7 @@ section{
 
 }
 
-.price h2{
 
-  text-align:center;
-
-}
 
 
 .slides{
@@ -471,17 +467,7 @@ section{
 
 }
 
-.works h2{
 
-  font-size:58px;
-
-  font-weight:300;
-
-  text-align:center;
-
-  margin-bottom:20px;
-
-}
 
 .next{
 
@@ -497,17 +483,7 @@ section{
 
 }
 
-.video-section h2{
 
-  font-size:58px;
-
-  font-weight:300;
-
-  text-align:center;
-
-  margin-bottom:60px;
-
-}
 
 
 
@@ -1302,3 +1278,124 @@ filter:
 
 }
 
+.additional-services{
+  padding:120px 80px;
+  background:#050505;
+  text-align:center;
+}
+
+
+
+.additional-intro{
+  max-width:760px;
+  margin:0 auto 50px;
+  font-size:20px;
+  line-height:1.8;
+  color:rgba(255,255,255,0.72);
+}
+
+.additional-box{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.additional-item{
+  width:340px;
+  padding:34px 28px;
+  border:1px solid rgba(217,164,65,0.55);
+  border-radius:22px;
+  background:rgba(255,255,255,0.03);
+  transition:0.3s;
+}
+
+.additional-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 30px rgba(217,164,65,0.12);
+}
+
+.additional-item h3{
+  font-size:22px;
+  font-weight:400;
+  color:#d9a441;
+  margin-bottom:18px;
+}
+
+.additional-item p{
+  font-size:15px;
+  line-height:1.8;
+  color:rgba(255,255,255,0.72);
+}
+
+.individual-price{
+  max-width:860px;
+  margin:50px auto 0;
+  padding:34px 40px;
+  border-radius:24px;
+  border:1px solid rgba(217,164,65,0.45);
+  background:rgba(217,164,65,0.08);
+}
+
+.individual-price h3{
+  font-size:26px;
+  font-weight:400;
+  color:#d9a441;
+  margin-bottom:16px;
+}
+
+.individual-price p{
+  font-size:18px;
+  line-height:1.8;
+  color:rgba(255,255,255,0.78);
+}
+
+@media(max-width:768px){
+
+  .additional-services{
+    padding:70px 20px;
+  }
+
+  .additional-services h2{
+    font-size:36px;
+  }
+
+  .additional-intro{
+    font-size:15px;
+    margin-bottom:35px;
+  }
+
+  .additional-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .additional-item{
+    width:100%;
+    max-width:320px;
+    padding:30px 24px;
+  }
+
+  .individual-price{
+    max-width:320px;
+    padding:30px 24px;
+  }
+
+  .individual-price h3{
+    font-size:22px;
+  }
+
+  .individual-price p{
+    font-size:15px;
+  }
+
+}
+
+section h2{
+  font-size:38px;
+  font-weight:400;
+  text-align:center;
+  margin-bottom:60px;
+}
